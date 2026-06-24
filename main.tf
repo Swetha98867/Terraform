@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-dev-eastus"
+  name     = "rg-eastus"
   location = "East US"
 }
 
@@ -9,10 +9,6 @@ resource "azurerm_storage_account" "storage1" {
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-}
-resource "azurerm_resource_group" "import_rg_created_from_azportal" {
-  name     = "rg-import-demo"
-  location = "East US"
 }
 resource "azurerm_storage_share" "fileshare" {
   name                 = "sharedfiles"
