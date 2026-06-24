@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-dev-eastus"
+  name     = "rg-eastus"
   location = "East US"
 }
 
